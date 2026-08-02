@@ -1,8 +1,25 @@
 aid: xiudan
-name: xiudan
-description: xiudan is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Xiudan (Showball)
+description: Shenzhen Xiudan Technology Co., Ltd. (深圳秀蛋科技有限公司) is the Chinese company
+  behind Showball (秀蛋), a virtual social "meta" mobile app where users create avatars
+  and socialize in virtual spaces, distributed through the iOS App Store and an Android
+  download on xiudan.net. A Qiming Venture Partners portfolio company, Xiudan publishes
+  no public developer program, API documentation, or machine-readable API artifacts
+  as of July 2026 - this profile records the company identity and probe results for
+  the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/xiudan/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://xiudan.net/images/index/xiudan.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,9 +28,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Social
+- Avatars
+- Virtual Worlds
+- Mobile Apps
+- Metaverse
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +46,14 @@ maintainers:
 common:
 - type: Website
   url: https://xiudan.net
+- type: PrivacyPolicy
+  url: http://www.xiudan.net/privacy.html
+- type: DomainSecurity
+  url: security/xiudan-domain-security.yml
+- type: LLMsTxt
+  url: llms/xiudan-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
