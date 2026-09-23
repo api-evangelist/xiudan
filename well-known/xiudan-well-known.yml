@@ -2,21 +2,24 @@ generated: '2026-07-21'
 method: none
 source: live HTTP probes of https://xiudan.net
 host: https://xiudan.net
-note: No /.well-known/ discovery documents are published; all probes returned 404.
-  Recorded so future enrichment rounds know this surface was checked. api.xiudan.net
-  serves the same static consumer homepage as the apex (not an API host).
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /llms.txt
-  status: 404
-- path: /robots.txt
-  status: 404
+note: No /.well-known/ discovery documents are published; all probes returned 404. Recorded so future
+  enrichment rounds know this surface was checked. api.xiudan.net serves the same static consumer homepage
+  as the apex (not an API host).
+hosts:
+- host: https://xiudan.net
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
